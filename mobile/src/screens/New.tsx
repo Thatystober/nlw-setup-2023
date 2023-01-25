@@ -23,13 +23,13 @@ export function New(){
     async function handleCreateNewHabbit(){
         try{
             if(!title.trim() || weekDays.length === 0){
-                Alert.alert('Novo Hábito', 'Informe o nome do hábito e escolha a periodicidade.');
+                return Alert.alert('Novo Hábito', 'Informe o nome do hábito e escolha a periodicidade.');
             }else if(weekDays.length === 0){
-                Alert.alert('Novo Hábito', 'Escolha a periodicidade.');
+                return Alert.alert('Novo Hábito', 'Escolha a periodicidade.');
             }
 
             if(!title.trim() && weekDays.length === 0){
-                Alert.alert('Novo Hábito', 'Informe o nome do hábito e escolha a periodicidade.');
+                return Alert.alert('Novo Hábito', 'Informe o nome do hábito e escolha a periodicidade.');
             }
             await api.post('habits', {title, weekDays});
 

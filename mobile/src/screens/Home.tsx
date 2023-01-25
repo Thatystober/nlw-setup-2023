@@ -47,11 +47,11 @@ export function Home() {
         fetchData();
     }, []);
 
-    // if (loading) {
-    //     return (
-    //       <Loading />
-    //     )
-    // }
+    if (loading) {
+        return (
+          <Loading />
+        )
+    }
 
     return (
         <View className="flex-1 bg-background px-8 pt-16">
